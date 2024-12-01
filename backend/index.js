@@ -1,8 +1,11 @@
+import 'dotenv/config'
 import express from 'express'
-const app=express();
-import { configDotenv } from 'dotenv';
-const PORT=process.env.PORT || 8000
 
-app.listen(PORT,()=>{
-    console.log(`server is running on ${PORT}`)
+import "./Models/db.js"
+const app=express();
+
+const port=process.env.PORT || 8010
+
+app.listen(port,()=>{
+    console.log(`server is running on ${port}`)
 })
